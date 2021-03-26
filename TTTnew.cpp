@@ -6,38 +6,38 @@ char frame[9]={'1','2','3','4','5','6','7','8','9'};
 int count=0;
 //globally declared char array(frame) and int count so as to in many functions
 void startscreen(){
-int gd=0,gm,i=0,k=15,inc=260;
-initgraph(&gd,&gm,"");
-while(inc!=440){
-setcolor(i++);
-setlinestyle(0,0,3);
-rectangle(5,5,getmaxx()-5,getmaxy()-5);
-setcolor(k--);
-setlinestyle(2,0,3);
-rectangle(20,20,getmaxx()-20,getmaxy()-30);
-setcolor(rand()%15);
-settextstyle(10,0,10);
-outtextxy(50,30,"TIC");
-setcolor(rand()%15);
-outtextxy(200,130,"TAC");
-setcolor(rand()%15);
-outtextxy(350,230,"TOE");
-setcolor(4);
-setfillstyle(4,14);
-inc=inc+10;
-bar(230,370,inc,400);
-settextstyle(0,0,2);
-setcolor(4);
-outtextxy(260,410,"Loading...");
-if(i==16&&k<0){
-    i=0;
-    k=15;
-}
-    Sleep(200);
-    cleardevice();
-}
-closegraph();
-}
+	int gd=0,gm,i=0,k=15,inc=260;
+	initgraph(&gd,&gm,"");
+	while(inc!=440){
+		setcolor(i++);
+		setlinestyle(0,0,3);
+		rectangle(5,5,getmaxx()-5,getmaxy()-5);
+		setcolor(k--);
+		setlinestyle(2,0,3);
+		rectangle(20,20,getmaxx()-20,getmaxy()-30);
+		setcolor(rand()%15);
+		settextstyle(10,0,10);
+		outtextxy(50,30,"TIC");
+		setcolor(rand()%15);
+		outtextxy(200,130,"TAC");
+		setcolor(rand()%15);
+		outtextxy(350,230,"TOE");
+		setcolor(4);
+		setfillstyle(4,14);
+		inc=inc+10;
+		bar(230,370,inc,400);
+		settextstyle(0,0,2);
+		setcolor(4);
+		outtextxy(260,410,"Loading...");
+		if(i==16&&k<0){
+			    i=0;
+			    k=15;
+			}
+   		Sleep(200);
+	        cleardevice();
+		}
+		closegraph();
+	}
 void show();
 void playersymbol();
 void run();
